@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="680.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="AppController">
+    <children>
+        <LineChart fx:id="irch" animated="false" disable="true" prefHeight="180.0" prefWidth="640.0">
+            <xAxis>
+                <NumberAxis fx:id="irx" animated="false" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="iry" animated="false" label="IR" side="LEFT"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="drych" animated="false" disable="true" layoutY="164.0" prefHeight="180.0" prefWidth="640.0">
+            <xAxis>
+                <NumberAxis fx:id="dryx" animated="false" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="dryy" animated="false" label="Dry Signal" side="LEFT"/>
+            </yAxis>
+        </LineChart>
+        <Button fx:id="btn_rv" disable="true" layoutX="562.0" layoutY="590.0" mnemonicParsing="false" text="Wet"/>
+        <Button fx:id="btn_rc" disable="true" layoutX="369.0" layoutY="591.0" mnemonicParsing="false" text="Record"/>
+        <Button fx:id="btn_lir" layoutX="118.0" layoutY="549.0" mnemonicParsing="false" text="Load IR"/>
+        <Button fx:id="btn_dry" disable="true" layoutX="563.0" layoutY="552.0" mnemonicParsing="false" text="Dry"/>
+        <Label fx:id="statusLabel" layoutX="8.0" layoutY="503.0" text="Status:"/>
+        <Button fx:id="btn_laf" disable="true" layoutX="369.0" layoutY="551.0" mnemonicParsing="false"
+                text="Load Audio File"/>
+        <Label fx:id="sourceLabel" layoutX="345.0" layoutY="534.0" text="Source:"/>
+        <Label fx:id="irLabel" layoutX="110.0" layoutY="534.0" text="IR:"/>
+        <ProgressIndicator fx:id="prog" layoutX="14.0" layoutY="564.0" prefHeight="57.0" prefWidth="78.0"
+                           visible="false"/>
+        <LineChart fx:id="wetch" animated="false" disable="true" layoutY="331.0" prefHeight="180.0" prefWidth="640.0">
+            <xAxis>
+                <NumberAxis fx:id="wetx" animated="false" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="wety" animated="false" label="Wet Signal" side="LEFT"/>
+            </yAxis>
+        </LineChart>
+        <TextField fx:id="tf_au_rec" layoutX="449.0" layoutY="591.0" prefHeight="27.0" prefWidth="48.0"
+                   promptText="Time(s)" text="5.0"/>
+        <Button fx:id="btn_ir_rec" layoutX="118.0" layoutY="587.0" mnemonicParsing="false" text="Record IR"/>
+        <TextField fx:id="tf_ir_rec" layoutX="272.0" layoutY="587.0" prefHeight="27.0" prefWidth="54.0"
+                   promptText="Time(s)" text="1.0"/>
+        <Button fx:id="btn_ir_save" disable="true" layoutX="118.0" layoutY="625.0" mnemonicParsing="false"
+                text="Save IR"/>
+        <Separator layoutX="337.0" layoutY="555.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="16.0"/>
+        <Separator layoutX="524.0" layoutY="555.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="16.0"/>
+        <TextField fx:id="tf_ir_del" layoutX="272.0" layoutY="625.0" prefHeight="27.0" prefWidth="54.0"
+                   promptText="Time(ms)" text="0"/>
+        <Label layoutX="216.0" layoutY="592.0" text="Time(s)"/>
+        <Label layoutX="205.0" layoutY="630.0" text="Delay(ms)"/>
+        <Button fx:id="btn_stop" disable="true" layoutX="560.0" layoutY="628.0" mnemonicParsing="false" text="Stop"/>
+
+    </children>
+</AnchorPane>
